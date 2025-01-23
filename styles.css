@@ -42,26 +42,37 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
+  border: 1px solid #00000048;
   color: black;
 }
 
 .botoes button:nth-last-of-type(1){
-  background-color: red;
-  color: white;
-  border: transparent;
-  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: 1s;
+  background: linear-gradient(to left, rgb(34, 255, 0) 50%, #ffffff 50%);
+  background-position: left;
+  background-size: 300% 100%;
 }
 
 .botoes button:nth-last-of-type(1):hover{
-  background-color: rgb(154, 0, 0);
+  background-position: right;
+  color: white;
+
 }
 
 .botoes button:nth-last-of-type(2){
-  transition: 0.5s;
+  transition: 1s;
+  border: 1px solid #00000048;
+  background: linear-gradient(to right, #ff0000 50%, #ffffff 50%);
+  background-size: 300% 100%;
+  background-position: right;
 }
 
 .botoes button:nth-last-of-type(2):hover{
-  background-color: rgb(75, 75, 75);
+  background-position: left;
+  color: white;
+  border: solid 2px #fff;
 }
 
 .container-pokemon{
@@ -74,3 +85,31 @@ button {
 }
 
 
+#container-pokemon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-pokemon {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 30px;
+  width: 290px;
+  height: 290px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-pokemon {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
